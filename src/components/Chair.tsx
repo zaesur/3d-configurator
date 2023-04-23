@@ -9,7 +9,7 @@ import { GLTF } from "three-stdlib";
 import { MeshStandardMaterial } from "three";
 import useMaterial from "../hooks/useMaterial";
 import useStore from "../hooks/useStore";
-import { materials } from "../constants";
+import { MATERIALS } from "../constants";
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -34,7 +34,7 @@ const defaultMaterial = new MeshStandardMaterial({ color: "beige" });
 export function Chair(props: JSX.IntrinsicElements["group"]) {
   const { nodes } = useGLTF("models/chair.glb") as GLTFResult;
   const { material } = useStore();
-  const woodMaterial = useMaterial(materials[material]);
+  const woodMaterial = useMaterial(MATERIALS[material]);
 
   return (
     <group {...props} dispose={null}>

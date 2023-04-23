@@ -24,3 +24,11 @@ body {
 canvas {
   touch-action: none;
 }
+
+.overlay * {
+  z-index: 3;
+}
+
+.overlay img:hover {
+  cursor: pointer;
+}
