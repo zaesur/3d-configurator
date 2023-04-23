@@ -33,6 +33,7 @@ const Customizer = () => {
                 material === materialName ? "0 0 5px 5px #ffffff" : undefined,
               ...imgStyle,
             }}
+            className="texture-select"
             src={`textures/${materialFilename}_basecolor.jpg`}
             onClick={() => setMaterial(materialName)}
           />
