@@ -3,7 +3,6 @@ import { Canvas } from "@react-three/fiber";
 import { Chair } from "./components/Chair";
 import Overlay from "./components/Overlay";
 import { OrbitControls, Stage } from "@react-three/drei";
-import { useRef } from "react";
 
 const App = () => {
   return (

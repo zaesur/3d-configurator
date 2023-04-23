@@ -1,12 +1,14 @@
 {
-  "name": "3d-config",
+  "name": "3d-configurator",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "yarn build --base=/3d-configurator/",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@react-three/drei": "^9.65.5",
@@ -21,6 +23,7 @@
     "@types/react-dom": "^18.0.11",
     "@types/three": "^0.150.1",
     "@vitejs/plugin-react-swc": "^3.0.0",
+    "gh-pages": "^5.0.0",
     "gltfjsx": "^6.1.4",
     "ts-standard": "^12.0.2",
     "typescript": "^4.9.3",
