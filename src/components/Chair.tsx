@@ -33,8 +33,8 @@ const defaultMaterial = new MeshStandardMaterial({ color: "beige" });
 
 export function Chair(props: JSX.IntrinsicElements["group"]) {
   const { nodes } = useGLTF("models/chair.glb") as GLTFResult;
-  const { material } = useStore();
-  const woodMaterial = useMaterial(MATERIALS[material]);
+  const { selectedMaterial } = useStore();
+  const woodMaterial = useMaterial(MATERIALS[selectedMaterial]);
 
   return (
     <group {...props} dispose={null}>
@@ -120,4 +120,4 @@ export function Chair(props: JSX.IntrinsicElements["group"]) {
   );
 }
 
-useGLTF.preload("/chair.glb");
+useGLTF.preload("/models/chair.glb");
