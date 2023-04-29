@@ -18,3 +18,9 @@ img:hover {
 .selected {
   box-shadow: 0 0 5px 5px #ffffff;
 }
+
+button,
+img {
+  position: relative;
+  z-index: 2;
+}

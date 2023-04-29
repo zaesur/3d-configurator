@@ -12,3 +12,8 @@ p {
   font-family: "Noto Sans", sans-serif;
   color: #23282d;
 }
+
+button {
+  position: relative;
+  z-index: 2;
+}

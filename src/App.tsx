@@ -7,12 +7,12 @@ import { Environment } from "@react-three/drei";
 const App = () => {
   return (
     <>
+      <Overlay />
       <Canvas dpr={[1, 2]}>
         <ambientLight intensity={0.5} />
         <Chair rotation={[0, (Math.PI / 4) * -3, 0]} />
         <Environment preset="city" />
       </Canvas>
-      <Overlay />
     </>
   );
 };
