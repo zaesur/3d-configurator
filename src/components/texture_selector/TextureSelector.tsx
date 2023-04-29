@@ -1,8 +1,8 @@
-import { MATERIALS, MaterialsKey, MaterialsValue } from "../constants";
-import useStore from "../hooks/useStore";
-import styles from "./TextureSelect.module.css";
+import { MATERIALS, MaterialsKey, MaterialsValue } from "../../constants";
+import useStore from "../../hooks/useStore";
+import styles from "./TextureSelector.module.css";
 
-const TextureSelect = () => {
+const TextureSelector = () => {
   const { selectedMaterial, setSelectedMaterial } = useStore();
 
   return (
@@ -22,4 +22,4 @@ const TextureSelect = () => {
   );
 };
 
-export default TextureSelect;
+export default TextureSelector;

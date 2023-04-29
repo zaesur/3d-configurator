@@ -1,6 +1,6 @@
 import { AiOutlineArrowLeft } from "react-icons/ai";
-import useStore from "../hooks/useStore";
-import TextureSelect from "./TextureSelect";
+import useStore from "../../hooks/useStore";
+import TextureSelect from "../texture_selector/TextureSelector";
 
 const Configurator = () => {
   const { setIsIntro } = useStore();

@@ -1,4 +1,4 @@
-import useStore from "../hooks/useStore";
+import useStore from "../../hooks/useStore";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import "./Intro.module.css";
 

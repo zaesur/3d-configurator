@@ -1,7 +1,7 @@
 import "./index.css";
 import { Canvas } from "@react-three/fiber";
-import { Chair } from "./components/Chair";
-import Overlay from "./components/Overlay";
+import { Chair } from "./components/models/Chair";
+import Overlay from "./components/overlay/Overlay";
 import { Stage } from "@react-three/drei";
 
 const App = () => {

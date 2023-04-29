@@ -7,9 +7,9 @@ import * as THREE from "three";
 import { useGLTF } from "@react-three/drei";
 import { GLTF } from "three-stdlib";
 import { MeshStandardMaterial } from "three";
-import useMaterial from "../hooks/useMaterial";
-import useStore from "../hooks/useStore";
-import { MATERIALS } from "../constants";
+import useMaterial from "../../hooks/useMaterial";
+import useStore from "../../hooks/useStore";
+import { MATERIALS } from "../../constants";
 
 type GLTFResult = GLTF & {
   nodes: {
