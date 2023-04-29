@@ -1,12 +1,19 @@
 import useStore from "../../hooks/useStore";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import { motion } from "framer-motion";
 import "./Intro.module.css";
+import { FunctionComponent } from "react";
+import { Config } from "../overlay/Overlay";
 
-const Intro = () => {
+interface IntroProps {
+  config: Config;
+}
+
+const Intro: FunctionComponent<IntroProps> = ({ config }) => {
   const { setIsIntro } = useStore();
 
   return (
-    <section>
+    <motion.section {...config}>
       <h1>Kangaroo</h1>
 
       <p>
@@ -19,7 +26,7 @@ const Intro = () => {
         Customize
         <AiOutlineArrowRight />
       </button>
-    </section>
+    </motion.section>
   );
 };
 
