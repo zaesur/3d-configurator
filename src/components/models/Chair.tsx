@@ -39,80 +39,45 @@ export default forwardRef<Group, JSX.IntrinsicElements["group"]>(function Chair(
       <mesh
         geometry={nodes.Traverso_Basso_HP.geometry}
         material={woodMaterial}
-        position={[0.33, 0, 0]}
-        scale={0.01}
       />
       <mesh
         geometry={nodes.Rete001_Seduta.geometry}
         material={defaultMaterial}
-        position={[0.33, 0, 0]}
-        scale={0.01}
       />
       <mesh
         geometry={nodes.Rete001_Schienale.geometry}
         material={defaultMaterial}
-        position={[0.33, 0, 0]}
-        scale={0.01}
       />
-      <mesh
-        geometry={nodes.Cordino_02.geometry}
-        material={defaultMaterial}
-        position={[0.33, 0, 0]}
-        scale={0.01}
-      />
-      <mesh
-        geometry={nodes.Gamba_HP.geometry}
-        material={woodMaterial}
-        position={[-0.29, 0.38, -0.28]}
-        scale={0.01}
-      />
-      <mesh
-        geometry={nodes.Cordino.geometry}
-        material={defaultMaterial}
-        position={[0.33, 0, 0]}
-        scale={0.01}
-      />
+      <mesh geometry={nodes.Cordino_02.geometry} material={defaultMaterial} />
+      <mesh geometry={nodes.Gamba_HP.geometry} material={woodMaterial} />
+      <mesh geometry={nodes.Cordino.geometry} material={defaultMaterial} />
       <mesh
         geometry={nodes.Traverso_Alto_HP.geometry}
         material={woodMaterial}
-        position={[0.33, 0, 0]}
-        scale={0.01}
       />
       <mesh
         geometry={nodes.Traverso_laterale_1_HP.geometry}
         material={woodMaterial}
-        position={[0.33, 0, 0]}
-        scale={0.01}
       />
       <mesh
         geometry={nodes.Traverso_posteriore_1_HP.geometry}
         material={woodMaterial}
-        position={[0.33, 0, 0]}
-        scale={0.01}
       />
       <mesh
         geometry={nodes.Traverso_frontale_1_HP.geometry}
         material={woodMaterial}
-        position={[0.33, 0, 0]}
-        scale={0.01}
       />
       <mesh
         geometry={nodes.Traverso_posteriore_2_HP.geometry}
         material={woodMaterial}
-        position={[0.33, 0, 0]}
-        scale={0.01}
       />
       <mesh
         geometry={nodes.Traverso_laterale_2_HP.geometry}
         material={woodMaterial}
-        position={[0.33, 0, 0]}
-        scale={0.01}
       />
       <mesh
         geometry={nodes.Traverso_frontale_2_HP.geometry}
         material={woodMaterial}
-        position={[0.33, 0, 0]}
-        scale={0.01}
       />
     </group>
   );
