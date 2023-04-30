@@ -1,9 +1,15 @@
 import "./index.css";
 import { Canvas } from "@react-three/fiber";
-import Chair from "./components/models/Chair";
 import Overlay from "./components/overlay/Overlay";
-import { Environment, OrbitControls } from "@react-three/drei";
+import {
+  Bounds,
+  Center,
+  Environment,
+  PresentationControls,
+} from "@react-three/drei";
 import useStore from "./hooks/useStore";
+import Chair from "./components/models/Chair";
+import { motion } from "framer-motion-3d";
 
 const App = () => {
   const { isIntro } = useStore();
@@ -12,15 +18,23 @@ const App = () => {
     <>
       <Overlay />
       <Canvas dpr={[1, 2]}>
-        <OrbitControls
-          enablePan={false}
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          enabled={!isIntro}
-        />
-        <ambientLight intensity={0.5} />
-        <Chair rotation={[0, (Math.PI / 4) * -3, 0]} />
+        <motion.group animate={{ x: isIntro ? 1 : 0, type: "spring" }}>
+          <PresentationControls
+            speed={3}
+            cursor={true}
+            enabled={!isIntro}
+            polar={[0, Math.PI / 2]}
+          >
+            <Bounds fit margin={1.5}>
+              <Center>
+                <Chair rotation={[0, (Math.PI / 4) * -3, 0]} />
+              </Center>
+            </Bounds>
+          </PresentationControls>
+        </motion.group>
+
         <Environment preset="city" />
+        <ambientLight intensity={0.5} />
       </Canvas>
     </>
   );

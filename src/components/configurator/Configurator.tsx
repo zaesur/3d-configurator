@@ -1,4 +1,3 @@
-import { AiOutlineArrowLeft } from "react-icons/ai";
 import useStore from "../../hooks/useStore";
 import TextureSelect from "../texture_selector/TextureSelector";
 import { motion } from "framer-motion";
@@ -14,10 +13,7 @@ const Configurator: FunctionComponent<ConfiguratorProps> = ({ config }) => {
 
   return (
     <motion.section {...config}>
-      <button onClick={() => setIsIntro(true)}>
-        <AiOutlineArrowLeft />
-        Exit
-      </button>
+      <button onClick={() => setIsIntro(true)}>Exit</button>
 
       <TextureSelect />
     </motion.section>

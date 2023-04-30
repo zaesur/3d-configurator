@@ -24,7 +24,7 @@ type GLTFResult = GLTF & {
   };
 };
 
-const defaultMaterial = new MeshStandardMaterial({ color: "beige" });
+const defaultMaterial = new MeshStandardMaterial({ color: "#DEB887" });
 
 export default forwardRef<Group, JSX.IntrinsicElements["group"]>(function Chair(
   props,
