@@ -14,7 +14,8 @@ const Intro: FunctionComponent<IntroProps> = ({ config }) => {
 
   return (
     <motion.section {...config}>
-      <h1>Kangaroo</h1>
+      <h1>Kangaroo Armchair</h1>
+      <h2>An hommage to Pierre Jeanneret</h2>
 
       <p>
         Designed for the Hall of the Chandigarh General Hospital and present in
