@@ -1,28 +1,41 @@
 import "./index.css";
 import { Canvas } from "@react-three/fiber";
-import { Chair } from "./components/Chair";
-import Overlay from "./components/Overlay";
-import { Loader, OrbitControls, Stage } from "@react-three/drei";
+import Overlay from "./components/overlay/Overlay";
+import {
+  Bounds,
+  Center,
+  Environment,
+  PresentationControls,
+} from "@react-three/drei";
+import useStore from "./hooks/useStore";
+import Chair from "./components/models/Chair";
+import { motion } from "framer-motion-3d";
 
 const App = () => {
+  const { isIntro } = useStore();
+
   return (
     <>
       <Overlay />
-
-      <div className="canvas-container">
-        <Canvas dpr={[1, 2]}>
-          <OrbitControls maxPolarAngle={Math.PI / 2} />
-
-          <Stage
-            adjustCamera={2}
-            intensity={0.5}
-            shadows="contact"
-            environment="city"
+      <Canvas dpr={[1, 2]}>
+        <motion.group animate={{ x: isIntro ? 1 : 0, type: "spring" }}>
+          <PresentationControls
+            speed={3}
+            cursor={true}
+            enabled={!isIntro}
+            polar={[0, Math.PI / 2]}
           >
-            <Chair rotation={[0, (Math.PI / 4) * -3, 0]} />
-          </Stage>
-        </Canvas>
-      </div>
+            <Bounds fit margin={1.5}>
+              <Center>
+                <Chair rotation={[0, (Math.PI / 4) * -3, 0]} />
+              </Center>
+            </Bounds>
+          </PresentationControls>
+        </motion.group>
+
+        <Environment preset="city" />
+        <ambientLight intensity={0.5} />
+      </Canvas>
     </>
   );
 };

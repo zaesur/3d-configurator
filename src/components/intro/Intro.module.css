@@ -1,0 +1,46 @@
+section {
+  width: 100%;
+  height: 100%;
+}
+
+article {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2 {
+  font-family: "Ade Display", serif;
+  color: #23282d;
+  font-weight: normal;
+  letter-spacing: 0.1rem;
+}
+
+h1 {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 6rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+p,
+button {
+  font-family: "Questrial", sans-serif;
+  color: #23282d;
+}
+
+button {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+.container {
+  text-align: justify;
+}

@@ -1,4 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+@font-face {
+  font-family: "Ade Display";
+  src: url("fonts/Ade-Display.otf") format("opentype");
+}
 
 * {
   box-sizing: border-box;
@@ -7,14 +11,14 @@
 html,
 body,
 #root,
-#main,
-.canvas-container {
+#main {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
   overflow: hidden;
   user-select: none;
+  font-size: 100%;
 }
 
 body {
@@ -24,12 +28,4 @@ body {
 
 canvas {
   touch-action: none;
-}
-
-.canvas-container * {
-  z-index: -1;
-}
-
-.texture-select:hover {
-  cursor: pointer;
 }

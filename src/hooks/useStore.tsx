@@ -2,13 +2,17 @@ import { create } from "zustand";
 import { MaterialsKey } from "../constants";
 
 interface AppState {
-  material: MaterialsKey;
-  setMaterial: (material: MaterialsKey) => void;
+  isIntro: boolean;
+  setIsIntro: (value: boolean) => void;
+  selectedMaterial: MaterialsKey;
+  setSelectedMaterial: (material: MaterialsKey) => void;
 }
 
 const useStore = create<AppState>((set) => ({
-  material: "oak",
-  setMaterial: (material) => set({ material }),
+  isIntro: true,
+  setIsIntro: (intro) => set({ isIntro: intro }),
+  selectedMaterial: "oak",
+  setSelectedMaterial: (material) => set({ selectedMaterial: material }),
 }));
 
 export default useStore;
