@@ -1,15 +1,10 @@
 import "./index.css";
 import { Canvas } from "@react-three/fiber";
 import Overlay from "./components/overlay/Overlay";
-import {
-  Bounds,
-  Center,
-  Environment,
-  PresentationControls,
-} from "@react-three/drei";
+import { OrbitControls, Stage } from "@react-three/drei";
 import useStore from "./hooks/useStore";
 import Chair from "./components/models/Chair";
-import { motion } from "framer-motion-3d";
+import { motion } from "framer-motion";
 
 const App = () => {
   const { isIntro } = useStore();
@@ -17,26 +12,19 @@ const App = () => {
   return (
     <>
       <Overlay />
-      <Canvas dpr={[1, 2]} camera={{ fov: 25 }}>
-        <motion.group animate={{ x: isIntro ? 1 : 0, type: "spring" }}>
-          <PresentationControls
-            speed={3}
-            cursor={true}
+      <motion.div className="canvas" animate={{ left: isIntro ? "25%" : "0" }}>
+        <Canvas dpr={[1, 2]} camera={{ fov: 25 }}>
+          <OrbitControls
+            enablePan={false}
+            enableZoom={false}
             enabled={!isIntro}
-            polar={[0, Math.PI / 2]}
-          >
-            <Bounds fit margin={1.5}>
-              <Center>
-                <Chair rotation={[0, (Math.PI / 4) * -3, 0]} />
-              </Center>
-            </Bounds>
-          </PresentationControls>
-        </motion.group>
-
-        <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
-        <Environment preset="city" />
-        <ambientLight intensity={0.5} />
-      </Canvas>
+            maxPolarAngle={Math.PI / 2}
+          />
+          <Stage adjustCamera={1.5} intensity={0.5}>
+            <Chair rotation={[0, (-Math.PI / 4) * 3, 0]} />
+          </Stage>
+        </Canvas>
+      </motion.div>
     </>
   );
 };
