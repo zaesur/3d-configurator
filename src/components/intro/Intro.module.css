@@ -34,18 +34,8 @@ h2 {
 
 p {
   line-height: 1.5em;
-}
-
-p,
-button {
   font-family: "Questrial", sans-serif;
   color: #23282d;
-}
-
-button {
-  display: inline-block;
-  position: relative;
-  z-index: 2;
 }
 
 .container {

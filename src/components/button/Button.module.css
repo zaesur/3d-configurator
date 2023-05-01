@@ -1,0 +1,17 @@
+.button {
+  display: inline-block;
+  z-index: 2;
+  padding: 12px 24px;
+  color: #23282d;
+  background-color: transparent;
+  border: 1px solid #23282d;
+  border-radius: 30px;
+  font-family: "Questrial", sans-serif;
+  font-weight: bold;
+  outline: none;
+  width: min-content;
+}
+
+.button:hover {
+  cursor: pointer;
+}

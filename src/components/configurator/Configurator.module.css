@@ -5,10 +5,3 @@ section {
   flex-direction: column;
   justify-content: space-between;
 }
-
-button {
-  width: min-content;
-  position: relative;
-  z-index: 2;
-  display: inline-block;
-}

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import styles from "./Intro.module.css";
 import { FunctionComponent } from "react";
 import { Config } from "../overlay/Overlay";
+import Button from "../button/Button";
 
 interface IntroProps {
   config: Config;
@@ -23,7 +24,7 @@ const Intro: FunctionComponent<IntroProps> = ({ config }) => {
             in many private homes, the chair is known for the “Z” shape of its
             sides, made up of three flush elements.
           </p>
-          <button onClick={() => setIsIntro(false)}>Customize</button>
+          <Button label="Customize" onClick={() => setIsIntro(false)} />
         </div>
       </article>
     </motion.section>

@@ -1,5 +1,6 @@
 import useStore from "../../hooks/useStore";
 import TextureSelect from "../texture_selector/TextureSelector";
+import Button from "../button/Button";
 import { Config } from "../overlay/Overlay";
 import { motion } from "framer-motion";
 import { FunctionComponent } from "react";
@@ -14,8 +15,7 @@ const Configurator: FunctionComponent<ConfiguratorProps> = ({ config }) => {
 
   return (
     <motion.section {...config}>
-      <button onClick={() => setIsIntro(true)}>Exit</button>
-
+      <Button label="Exit" onClick={() => setIsIntro(true)} />
       <TextureSelect />
     </motion.section>
   );
