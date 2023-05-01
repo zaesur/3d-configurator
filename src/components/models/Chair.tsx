@@ -32,7 +32,7 @@ export default forwardRef<Group, JSX.IntrinsicElements["group"]>(function Chair(
 ) {
   const { nodes } = useGLTF("models/chair.glb") as GLTFResult;
   const { selectedMaterial } = useStore();
-  const woodMaterial = useMaterial(MATERIALS[selectedMaterial]);
+  const woodMaterial = useMaterial(selectedMaterial);
 
   return (
     <group ref={ref} {...props} dispose={null}>

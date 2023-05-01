@@ -1,4 +1,8 @@
-import { MATERIALS, MaterialsKey, MaterialsValue } from "../../constants";
+import {
+  MATERIALS,
+  MaterialsKey,
+  MaterialsValue,
+} from "../../hooks/useMaterial";
 import useStore from "../../hooks/useStore";
 import styles from "./TextureSelector.module.css";
 
@@ -8,12 +12,12 @@ const TextureSelector = () => {
   return (
     <div className={styles.container}>
       {(Object.entries(MATERIALS) as [MaterialsKey, MaterialsValue][]).map(
-        ([material, materialFilename]) => (
+        ([material, { color }]) => (
           <img
             alt={material}
             key={material}
             className={selectedMaterial === material ? styles.selected : ""}
-            src={`textures/${materialFilename}_basecolor.jpg`}
+            src={`textures/${color}`}
             onClick={() => setSelectedMaterial(material)}
           />
         )

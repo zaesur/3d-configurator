@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import { MaterialsKey } from "../constants";
+import { MATERIALS, MaterialsKey } from "./useMaterial";
 
 interface AppState {
   isIntro: boolean;
@@ -11,7 +11,7 @@ interface AppState {
 const useStore = create<AppState>((set) => ({
   isIntro: true,
   setIsIntro: (intro) => set({ isIntro: intro }),
-  selectedMaterial: "oak",
+  selectedMaterial: Object.keys(MATERIALS).reverse()[0] as MaterialsKey,
   setSelectedMaterial: (material) => set({ selectedMaterial: material }),
 }));
 
