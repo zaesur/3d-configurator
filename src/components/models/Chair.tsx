@@ -3,7 +3,6 @@ import { GLTF } from "three-stdlib";
 import { Group, MeshStandardMaterial } from "three";
 import useMaterial from "../../hooks/useMaterial";
 import useStore from "../../hooks/useStore";
-import { MATERIALS } from "../../constants";
 import { forwardRef } from "react";
 
 type GLTFResult = GLTF & {
