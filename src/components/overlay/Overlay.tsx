@@ -1,13 +1,9 @@
-import { AnimatePresence, HTMLMotionProps } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import useStore from "../../hooks/useStore";
 import Configurator from "../configurator/Configurator";
 import Intro from "../intro/Intro";
-import "./Overlay.module.css";
-
-export type Config = Pick<
-  HTMLMotionProps<"section">,
-  "initial" | "animate" | "exit"
->;
+import { motion } from "framer-motion";
+import styles from "./Overlay.module.css";
 
 const Overlay = () => {
   const { isIntro } = useStore();
@@ -22,7 +18,13 @@ const Overlay = () => {
   return (
     <main>
       <AnimatePresence>
-        {isIntro ? <Intro config={config} /> : <Configurator config={config} />}
+        <motion.section
+          key={isIntro ? "intro" : "configurator"}
+          className={styles.section}
+          {...config}
+        >
+          {isIntro ? <Intro /> : <Configurator />}
+        </motion.section>
       </AnimatePresence>
     </main>
   );
