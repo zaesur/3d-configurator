@@ -24,6 +24,18 @@ body,
 body {
   background: #e0dbd4;
   font-family: "Questrial", sans-serif;
+  color: #23282d;
+  font-size: 1em;
+}
+
+h1 {
+  font-family: "Ade Display", serif;
+  font-weight: normal;
+  font-size: 2rem;
+  text-transform: uppercase;
+  line-height: 0.9em;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: #23282d 1px;
 }
 
 .canvas {
