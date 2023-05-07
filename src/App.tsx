@@ -8,11 +8,15 @@ import { motion } from "framer-motion";
 
 const App = () => {
   const { isIntro } = useStore();
+  const { matches: isBig } = window.matchMedia("(min-width: 992px)");
 
   return (
     <>
       <Overlay />
-      <motion.div className="canvas" animate={{ left: isIntro ? "25%" : "0" }}>
+      <motion.div
+        className="canvas"
+        animate={isBig && { left: isIntro ? "25%" : "0" }}
+      >
         <Canvas dpr={[1, 2]} camera={{ fov: 25 }}>
           <OrbitControls
             enablePan={false}
