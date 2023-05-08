@@ -12,13 +12,13 @@ const TextureSelector = () => {
   return (
     <div className={styles.container}>
       {(Object.entries(MATERIALS) as [MaterialsKey, MaterialsValue][]).map(
-        ([material, { color }]) => (
+        ([materialName, material]) => (
           <img
-            alt={material}
-            key={material}
-            className={selectedMaterial === material ? styles.selected : ""}
-            src={`textures/${color}`}
-            onClick={() => setSelectedMaterial(material)}
+            alt={materialName}
+            key={materialName}
+            className={selectedMaterial === materialName ? styles.selected : ""}
+            src={`textures/${material.textures.color}`}
+            onClick={() => setSelectedMaterial(materialName)}
           />
         )
       )}
