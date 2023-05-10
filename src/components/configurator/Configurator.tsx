@@ -5,7 +5,7 @@ import { FunctionComponent } from "react";
 import styles from "./Configurator.module.css";
 
 const Configurator: FunctionComponent = () => {
-  const { setIsIntro } = useStore();
+  const { setIsIntro, setTarget } = useStore();
 
   return (
     <article className={styles.article}>
