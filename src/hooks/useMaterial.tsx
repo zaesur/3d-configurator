@@ -1,8 +1,14 @@
 import { useTexture } from "@react-three/drei";
 import { useMemo } from "react";
-import { Material, MeshPhongMaterial, MeshStandardMaterial } from "three";
+import { Material, MeshStandardMaterial } from "three";
 
 export const MATERIALS = Object.freeze({
+  // debug: {
+  //   textures: {
+  //     color: "uv1.png",
+  //   },
+  //   rotation: 0,
+  // },
   oak: {
     textures: {
       color: "Wood_027_basecolor.jpg",
